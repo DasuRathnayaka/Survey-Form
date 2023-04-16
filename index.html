@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Please fill out this survey form to help us improve our services.</p>
+    <form id="survey-form">
+      <label for="name" id="name-label">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email" id="email-label">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+      <label for="number" id="number-label">Age:</label>
+      <input type="number" id="number" name="age" min="18" max="100" placeholder="Enter your age">
+
+      <label for="dropdown">Which product did you purchase?</label>
+      <select id="dropdown" name="product">
+        <option value="">Select a product</option>
+        <option value="product1">Product 1</option>
+        <option value="product2">Product 2</option>
+        <option value="product3">Product 3</option>
+      </select>
+
+      <fieldset>
+        <legend>How satisfied are you with our product?</legend>
+        <label><input type="radio" name="satisfaction" value="very satisfied">Very satisfied</label>
+        <label><input type="radio" name="satisfaction" value="satisfied">Satisfied</label>
+        <label><input type="radio" name="satisfaction" value="neutral">Neutral</label>
+        <label><input type="radio" name="satisfaction" value="unsatisfied">Unsatisfied</label>
+        <label><input type="radio" name="satisfaction" value="very unsatisfied">Very unsatisfied</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>What features would you like to see in our next product release?</legend>
+        <label><input type="checkbox" name="features[]" value="more colors">More colors</label>
+        <label><input type="checkbox" name="features[]" value="better performance">Better performance</label>
+        <label><input type="checkbox" name="features[]" value="more storage">More storage</label>
+        <label><input type="checkbox" name="features[]" value="more accessories">More accessories</label>
+      </fieldset>
+
+      <label for="comments">Additional comments:</label>
+      <textarea id="comments" name="comments" placeholder="Enter your comments"></textarea>
+
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </body>
+</html>
